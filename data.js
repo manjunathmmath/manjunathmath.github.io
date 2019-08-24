@@ -464,7 +464,7 @@ function getImages(data, month) {
     var imgMarkup = ''
     imgMarkup += '<div class="demo-gallery mrb50">'
     imgMarkup += '<div id="aniimated-thumbnials" class="list-unstyled">'
-    $(data).find("a").attr("href", function (i, val) {
+    $.each(data,function (i, val) {
         if (val.match(/\.(jpe?g|png|gif|mp4)$/)) {
             if (val != '' && (val.indexOf('IMG') != -1)) {
 
