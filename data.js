@@ -455,6 +455,10 @@ function getImagesFromFolder() {
    ]
 }
 
+$(document).on("change","#year",function(){
+    swapProgramData()
+})
+
 function getImages(data, month) {
     var fileExt = [];
     fileExt[0] = ".png";
@@ -476,7 +480,8 @@ function getImages(data, month) {
                     delimterEx = "-"
                 }
                 var imageMonth = imageName[1].substring(4, 6)
-                if (imageMonth == month) {
+                var imageYear = imageName[1].substring(0, 4)
+                if (imageMonth == month && imageYear == $("#year").val()) {
                     imgNotFound = true;
                     var ext = imageName[3].split(".")
                     var name = imageName[0] + delimterEx + imageName[1] + delimterEx + imageName[2] + "." + ext[1]
