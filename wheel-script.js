@@ -133,6 +133,7 @@ function swapProgramData() {
         }
 
         $.when(getImagesFromFolder()).done(function (data) {
+            console.log("data--"+data);
             $('section.info-panel').html(getImages(data, activeWheel.selectedNavItemIndex + 1));
             $('#aniimated-thumbnials').lightGallery({
                 thumbnail: true,
