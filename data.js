@@ -51,8 +51,8 @@ function generateWheelMarkup() {
     });
 }
 
-var folder = "/manjunathmmath.github.io/Sheehan/thumbs/";
-var actualFolder = "/manjunathmmath.github.io/Sheehan/"
+var folder = "/Sheehan/thumbs/";
+var actualFolder = "/Sheehan/"
 
 function getImagesFromFolder() {
     return $.ajax({
