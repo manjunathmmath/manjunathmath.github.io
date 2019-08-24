@@ -1,0 +1,33 @@
+.gsa-body * {
+    font-family: Open Sans, Arial, sans-serif;
+}
+.gsa-body {
+    margin: 0 !important;
+}
+.search-results {
+    margin-top: 0 !important;
+}
+.result-head {
+    font-size: 1.3em !important;
+    margin-bottom: 10px !important;
+    margin-top: 0 !important;
+}
+.result-head a {
+    text-decoration: none;
+}
+.result-link {
+    color: #086c54;
+    font-family: Open Sans Condensed, Arial, sans-serif !important;
+    font-weight: 700;
+}
+#keymatch-wrap .keymatch-url-text {
+    padding-left: 0 !important;    
+}
+#keymatch-wrap a {
+    color: #086c54;
+    font-family: Open Sans Condensed, Arial, sans-serif !important;
+    font-size: 1.3em !important;
+    font-weight: 700;
+    padding-left: 0 !important;
+    text-decoration: none;
+}

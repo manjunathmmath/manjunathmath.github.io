@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Snap Wheel</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/tinyscrollbar.css" rel="stylesheet" type="text/css" />
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+    <link href="css/print.css" rel="stylesheet" type="text/css" />
+    <link href="css/gsa.css" rel="stylesheet" type="text/css" />
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+    <link href="wheel-styles.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="light/dist/css/lightgallery.css" />
+    <link type="text/css" rel="stylesheet" href="light/lib/justifiedGallery.min.css" />
+    
+    <style>
+        #wrapper {
+            margin: 0px -15px 0 -15px;
+        }
+
+        @media screen and (max-width: 599px) {
+            #wrapper {
+                margin-top: 0px;
+            }
+        }
+
+        .thumbnail-class {
+            width: 95px;
+            height: 60px;
+            margin: 1px;
+            border: 1px solid #086c54
+        }
+
+        .list-unstyled li {
+            cursor: pointer;
+        }
+
+        .info-panel {
+            height: 560px;
+            background: #2f6d5e;
+            overflow-y: auto;
+            max-height: 560px;
+            width: 100%;
+        }
+
+        .area-of-study {
+            width: 100%
+        }
+
+        .area-of-study ul li {
+            display: inline-block;
+        }
+
+        .area-of-study ul li a.active:after {
+            width: 71%;
+        }
+
+        .area-of-study ul li:last-child {
+            margin-top: 0px;
+            margin-right: 0px;
+        }
+
+        .main-content {
+            display: block
+        }
+    </style>
+</head>
+
+<body>
+    <div id="temp-breadcrumbs">
+    </div>
+    <div class="container-fluid">
+        <div id="main-menu-panel">
+            <div class="col-sm-4 col-xs-4 left-nav">
+                <div class="scroll-pane">
+                    <div class="scrollbar">
+                        <div class="track">
+                            <div class="thumb">
+                                <div class="end"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="viewport">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="wheel-data-container" style="display: none;">
+            <div id="wheel-month"></div>
+        </div>
+        <div id="wrapper" class="row">
+            <!-- Main Content -->
+            <div class="row-content bg-white">
+                <!-- left-->
+                <div id="container" class="bg-white">
+                    <!-- Wheel -->
+                    <div id="wheel-div">
+                    </div>
+
+                    <!-- Navigation of wheel -->
+                    <div id="wheel-nav">
+                        <!-- next btn -->
+                        <div class="next" data-arrow-nav="next">
+                            <img src="files/arrow%402x_fixed.png" alt="Spin Whell Left">
+                        </div>
+                        <!-- program title -->
+                        <div class="program-title">
+                            <h3>SNAPS</h3>
+                        </div>
+                        <!-- previous btn -->
+                        <div class="previous" data-arrow-nav="previous">
+
+                            <img src="files/arrow%402x_fixed.png" alt="Spin Wheel Right">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- right-->
+                <div id="container">
+                    <!-- Triganle-->
+                    <div class="wheel-triangle"></div>
+                    <div class="flex-container">
+                        <!-- Title-->
+                        <div id="title">
+                            <h2>SHEEHAN ISAAC MATH </h2>
+                        </div>
+                        <div class="main-content">
+                            <section class="area-of-study">
+                                <ul>
+                                    <li style="width:71%;">
+                                        <a href="#" data-study-link="health" class="active">
+                                            <span style="margin-right:10px;">FEB 07 2018</span>
+                                            <span style="margin-right:5px;">AT 10:30 AM</span>
+                                            <span style="margin-right:5px;">W:3.1</span>
+                                            <span style="margin-right:5px;">L:1.2 MM</span>
+                                        </a>
+                                    </li>
+                                    <li id="spinWheel1" style="width:28%;">
+                                        <a href="javascript:void(0);" class="btn">CLICK HERE TO
+                                            <br/>SPIN THE WHEEL</a>
+                                    </li>
+                                </ul>
+                            </section>
+                            <section class="info-panel">
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- mobile Disclaimer title and social icons -->
+        </div>
+    </div>
+
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/tinyscrollbar.min.js" type="text/javascript"></script>
+    <script src="js/wowslider.js" type="text/javascript"></script>
+    <script src="js/modernizr.js" type="text/javascript"></script>
+    <script src="js/enquire.min.js" type="text/javascript"></script>
+    <script src="js/jquery.fittext.js" type="text/javascript"></script>
+
+    <script src="data.js" type="text/javascript"></script>
+    <script src="raphael.min.js" type="text/javascript"></script>
+    <script src="raphael.icons.min.js" type="text/javascript"></script>
+    <script src="wheelnav.min.js" type="text/javascript"></script>
+    <script src="wheel-script.js" type="text/javascript"></script>
+    <script src="light/lib/jquery.justifiedGallery.min.js"></script>
+    
+    <script src="light/dist/js/lightgallery.min.js"></script>
+    <script src="light/modules/lg-thumbnail.min.js"></script>
+    <script src="light/modules/lg-fullscreen.min.js"></script>
+    <script src="light/modules/lg-autoplay.min.js"></script>
+    <script src="light/modules/lg-hash.min.js"></script>
+    <script src="light/modules/lg-pager.min.js"></script>
+    <script src="light/modules/lg-video.min.js"></script>
+    <script src="light/modules/lg-zoom.min.js"></script>
+    <script>
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+@media print {
+    #site-header,
+    img,
+    .section-breadcrumbs,
+    .section-submenu,
+    #float-nav,
+    #home-section-background-target,
+    #home-banner-message,
+    #footer,
+    iframe
+    { display: none; }
+
+    /* Handbook Print CSS */
+    .main-menu-panel,
+    .section-submenu-panel,
+    .ivy-sec,
+    .ivy-print-section.noprint {display:none;}
+
+    .ivy-print-section.print {display:block;}
+
+    .ivy-print-section.noprint select,
+    .ivy-print-section.print select,
+    .ivy-print-section.noprint button,
+    .ivy-print-section.print button {display:none;}
+}
