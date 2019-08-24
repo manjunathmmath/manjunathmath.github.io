@@ -51,8 +51,8 @@ function generateWheelMarkup() {
     });
 }
 
-var folder = "/Sheehan/thumbs/";
-var actualFolder = "/Sheehan/"
+var folder = "/manjunathmmath.github.io/Sheehan/thumbs/";
+var actualFolder = "/manjunathmmath.github.io/Sheehan/"
 
 function getImagesFromFolder() {
     return $.ajax({
@@ -107,5 +107,6 @@ function getImages(data, month) {
     }
     imgMarkup += '</div>'
     imgMarkup += '</div>'
+    console.log(imgMarkup)
     return imgMarkup;
 }
