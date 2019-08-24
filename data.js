@@ -87,7 +87,7 @@ function getImages(data, month) {
                     var ext = imageName[3].split(".")
                     var name = imageName[0] + delimterEx + imageName[1] + delimterEx + imageName[2] + "." + ext[1]
                     imgMarkup += '<a class="" href="' + actualFolder + name + '">'
-                    imgMarkup += '<img class="img-responsive" src="' + folder + val + '" />'
+                    imgMarkup += '<img class="img-responsive" src="/' + folder + val + '" />'
                     imgMarkup += '<div class="demo-gallery-poster">'
                     imgMarkup += '<img src="light/dist/img/zoom.png">'
                     imgMarkup += '</div>'
@@ -99,7 +99,7 @@ function getImages(data, month) {
 
     if (!imgNotFound) {
         imgMarkup += '<a class="" href="images/IMG-20171228-WA0003.jpg">'
-        imgMarkup += '<img class="img-responsive" src="images/IMG-20171228-WA0003.jpg" />'
+        imgMarkup += '<img class="img-responsive" src="/images/IMG-20171228-WA0003.jpg" />'
         imgMarkup += '<div class="demo-gallery-poster">'
         imgMarkup += '<img src="light/dist/img/zoom.png">'
         imgMarkup += '</div>'
