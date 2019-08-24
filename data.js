@@ -57,6 +57,9 @@ var actualFolder = "/Sheehan/"
 function getImagesFromFolder() {
     return $.ajax({
         url: folder,
+        type: 'Get',
+        async: false,
+        cache: false,
         success: function (data) {}
     });
 }
