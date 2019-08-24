@@ -17,10 +17,20 @@
     <link href="wheel-styles.css" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="light/dist/css/lightgallery.css" />
     <link type="text/css" rel="stylesheet" href="light/lib/justifiedGallery.min.css" />
-    
+
     <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        .container-fluid {
+            height: 100%;
+        }
+
         #wrapper {
             margin: 0px -15px 0 -15px;
+            height: 100%;
         }
 
         @media screen and (max-width: 599px) {
@@ -41,10 +51,10 @@
         }
 
         .info-panel {
-            height: 560px;
+            height: auto;
             background: #2f6d5e;
             overflow-y: auto;
-            max-height: 560px;
+            max-height: 90%;
             width: 100%;
         }
 
@@ -67,6 +77,15 @@
 
         .main-content {
             display: block
+        }
+
+        .year-wrapper {
+            position: absolute;
+            top: 1%;
+            z-index: 999;
+            width: 100%;
+            left: 22.5%;
+            opacity: 0.5
         }
     </style>
 </head>
@@ -93,15 +112,28 @@
         <div id="wheel-data-container" style="display: none;">
             <div id="wheel-month"></div>
         </div>
+        <div class="row year-wrapper">
+            <div class="col-md-1">
+                <div class="form-group">
+                    <select class="form-control" id="year">
+                            <option>2018</option>
+                            <option>2019</option>
+                            <option>2020</option>
+                        </select>
+                </div>
+            </div>
+        </div>
         <div id="wrapper" class="row">
             <!-- Main Content -->
+
             <div class="row-content bg-white">
+
                 <!-- left-->
                 <div id="container" class="bg-white">
+
                     <!-- Wheel -->
                     <div id="wheel-div">
                     </div>
-
                     <!-- Navigation of wheel -->
                     <div id="wheel-nav">
                         <!-- next btn -->
@@ -169,7 +201,7 @@
     <script src="wheelnav.min.js" type="text/javascript"></script>
     <script src="wheel-script.js" type="text/javascript"></script>
     <script src="light/lib/jquery.justifiedGallery.min.js"></script>
-    
+
     <script src="light/dist/js/lightgallery.min.js"></script>
     <script src="light/modules/lg-thumbnail.min.js"></script>
     <script src="light/modules/lg-fullscreen.min.js"></script>
@@ -179,6 +211,7 @@
     <script src="light/modules/lg-video.min.js"></script>
     <script src="light/modules/lg-zoom.min.js"></script>
     <script>
+
     </script>
 
 </body>
